@@ -14,7 +14,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/neon1b/1200/800',
       'https://picsum.photos/seed/neon1c/1200/800'
     ],
-    link: 'https://example.com/events/neon-nights-festival'
+    link: 'https://example.com/events/neon-nights-festival',
+    isFavorite: false
   },
   {
     id: 2,
@@ -29,7 +30,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/standup2b/1200/800',
       'https://picsum.photos/seed/standup2c/1200/800'
     ],
-    link: 'https://example.com/events/standup-open-mic'
+    link: 'https://example.com/events/standup-open-mic',
+    isFavorite: false
   },
   {
     id: 3,
@@ -44,7 +46,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/symph3b/1200/800',
       'https://picsum.photos/seed/symph3c/1200/800'
     ],
-    link: 'https://example.com/events/symphony-at-sunset'
+    link: 'https://example.com/events/symphony-at-sunset',
+    isFavorite: false
   },
   {
     id: 4,
@@ -59,7 +62,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/food4b/1200/800',
       'https://picsum.photos/seed/food4c/1200/800'
     ],
-    link: 'https://example.com/events/street-food-week'
+    link: 'https://example.com/events/street-food-week',
+    isFavorite: false
   },
   {
     id: 5,
@@ -74,7 +78,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/run5b/1200/800',
       'https://picsum.photos/seed/run5c/1200/800'
     ],
-    link: 'https://example.com/events/city-marathon-10k'
+    link: 'https://example.com/events/city-marathon-10k',
+    isFavorite: false
   },
   {
     id: 6,
@@ -89,7 +94,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/rock6b/1200/800',
       'https://picsum.photos/seed/rock6c/1200/800'
     ],
-    link: 'https://example.com/events/indie-rock-live'
+    link: 'https://example.com/events/indie-rock-live',
+    isFavorite: false
   },
   {
     id: 7,
@@ -104,7 +110,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/art7b/1200/800',
       'https://picsum.photos/seed/art7c/1200/800'
     ],
-    link: 'https://example.com/events/art-expo-modern-shapes'
+    link: 'https://example.com/events/art-expo-modern-shapes',
+    isFavorite: false
   },
   {
     id: 8,
@@ -119,7 +126,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/coffee8b/1200/800',
       'https://picsum.photos/seed/coffee8c/1200/800'
     ],
-    link: 'https://example.com/events/workshop-coffee-basics'
+    link: 'https://example.com/events/workshop-coffee-basics',
+    isFavorite: false
   },
   {
     id: 9,
@@ -134,7 +142,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/science9b/1200/800',
       'https://picsum.photos/seed/science9c/1200/800'
     ],
-    link: 'https://example.com/events/kids-science-show'
+    link: 'https://example.com/events/kids-science-show',
+    isFavorite: false
   },
   {
     id: 10,
@@ -149,7 +158,8 @@ export const EVENTS: EventItem[] = [
       'https://picsum.photos/seed/cinema10b/1200/800',
       'https://picsum.photos/seed/cinema10c/1200/800'
     ],
-    link: 'https://example.com/events/cinema-night-classics'
+    link: 'https://example.com/events/cinema-night-classics',
+    isFavorite: false
   }
 ];
 

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
-import { EVENTS } from '../../data/events';
+import { EventItem } from '../../models/event.model';
 import { EventCardComponent } from '../event-card/event-card.component';
 
 @Component({
@@ -11,6 +11,7 @@ import { EventCardComponent } from '../event-card/event-card.component';
   styleUrl: './events-list.component.scss'
 })
 export class EventsListComponent {
-  events = EVENTS;
+  events = input.required<EventItem[]>();
+  toggleFavorite = output<number>();
 }
 

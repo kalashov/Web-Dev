@@ -1,1 +1,25 @@
-<app-events-list />
+<section class="page">
+  <header class="header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">OS</div>
+      <div class="titles">
+        <h1>Online Store</h1>
+        <p>Каталог событий и билетов (демо)</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="favorites">
+    <h2>⭐ Favorites ({{ favorites.length }})</h2>
+
+    @if (favorites.length === 0) {
+      <p class="empty">No favorite products yet</p>
+    } @else {
+      <app-events-list [events]="favorites" (toggleFavorite)="toggleFavorite($event)" />
+    }
+  </section>
+
+  <div class="spacer"></div>
+
+  <app-events-list [events]="events" (toggleFavorite)="toggleFavorite($event)" />
+</section>

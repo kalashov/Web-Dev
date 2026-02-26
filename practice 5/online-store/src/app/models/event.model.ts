@@ -7,5 +7,6 @@ export type EventItem = {
   image: string;
   images: string[];
   link: string;
+  isFavorite: boolean;
 };
 

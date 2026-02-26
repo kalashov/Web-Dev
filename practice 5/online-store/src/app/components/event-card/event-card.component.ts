@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, output } from '@angular/core';
 
 import { EventItem } from '../../models/event.model';
 
@@ -11,6 +11,7 @@ import { EventItem } from '../../models/event.model';
 })
 export class EventCardComponent {
   event = input.required<EventItem>();
+  toggleFavorite = output<number>();
 
   ratingStars = computed(() => {
     const rating = this.event().rating;
@@ -37,6 +38,10 @@ export class EventCardComponent {
     const url = encodeURIComponent(e.link);
     const text = encodeURIComponent(e.name);
     return `https://t.me/share/url?url=${url}&text=${text}`;
+  }
+
+  onToggleFavorite() {
+    this.toggleFavorite.emit(this.event().id);
   }
 }
 
