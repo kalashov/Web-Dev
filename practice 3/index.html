@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Профиль</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Перейти к профилю</a>
+
+    <div class="app">
+      <aside class="sidebar" aria-label="Боковая навигация">
+        <header class="sidebar-header">
+          <a class="logo" href="#" aria-label="Главная">Instagram</a>
+        </header>
+
+        <nav class="sidebar-nav" aria-label="Навигация">
+          <ul class="sidebar-list">
+            <li><a class="sidebar-link" href="#"><span class="icon" aria-hidden="true">⌂</span><span>Home</span></a></li>
+            <li><a class="sidebar-link" href="#"><span class="icon" aria-hidden="true">⌕</span><span>Search</span></a></li>
+            <li><a class="sidebar-link" href="#"><span class="icon" aria-hidden="true">▦</span><span>Explore</span></a></li>
+            <li><a class="sidebar-link" href="#"><span class="icon" aria-hidden="true">▶</span><span>Reels</span></a></li>
+            <li><a class="sidebar-link" href="#"><span class="icon" aria-hidden="true">✉</span><span>Messages</span></a></li>
+            <li><a class="sidebar-link" href="#"><span class="icon" aria-hidden="true">♡</span><span>Notifications</span></a></li>
+            <li><a class="sidebar-link" href="#"><span class="icon" aria-hidden="true">＋</span><span>Create</span></a></li>
+            <li><a class="sidebar-link" href="#" aria-current="page"><span class="icon" aria-hidden="true">●</span><span>Profile</span></a></li>
+          </ul>
+        </nav>
+
+        <form class="sidebar-search" role="search" action="#" method="get">
+          <label class="sr-only" for="sidebar-q">Поиск</label>
+          <input id="sidebar-q" name="q" type="search" placeholder="Search" autocomplete="off" />
+        </form>
+
+        <div class="sidebar-user" aria-label="Текущий пользователь">
+          <img
+            class="small-avatar"
+            alt="Мини-аватар пользователя"
+            width="32"
+            height="32"
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><rect width='64' height='64' rx='18' fill='%23f3f4f6'/><circle cx='32' cy='26' r='11' fill='%239ca3af'/><path d='M12 58c4-14 14-20 20-20s16 6 20 20' fill='%239ca3af'/></svg>"
+          />
+          <span class="sidebar-username">pzamazan</span>
+        </div>
+      </aside>
+
+      <main id="content" class="main">
+        <header class="profile-header">
+          <img
+            class="profile-avatar"
+            alt="Аватар профиля"
+            width="160"
+            height="160"
+            src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><defs><linearGradient id='ring' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f59e0b'/><stop offset='1' stop-color='%23ef4444'/></linearGradient></defs><rect width='160' height='160' rx='56' fill='url(%23ring)'/><rect x='10' y='10' width='140' height='140' rx='50' fill='%23ffffff'/><circle cx='80' cy='68' r='26' fill='%239ca3af'/><path d='M34 138c10-30 30-44 46-44s36 14 46 44' fill='%239ca3af'/></svg>"
+          />
+
+          <div class="profile-info">
+            <div class="profile-top">
+              <h1 class="profile-username">pzamazan</h1>
+              <span class="verified" aria-label="Верифицированный аккаунт">✓</span>
+              <div class="profile-actions" role="group" aria-label="Действия профиля">
+                <button class="btn" type="button">Edit profile</button>
+                <button class="btn" type="button">View archive</button>
+              </div>
+            </div>
+
+            <ul class="counts" aria-label="Счётчики профиля">
+              <li><span class="count-number">1</span> post</li>
+              <li><span class="count-number">286</span> followers</li>
+              <li><span class="count-number">498</span> following</li>
+            </ul>
+
+            <div class="profile-text">
+              <p class="display-name">Ramazan Perdebay</p>
+              <p class="bio">Frontend, UI, семантика и аккуратная сетка.</p>
+              <a class="profile-link" href="#" aria-label="Ссылка профиля">@pzamazan</a>
+            </div>
+          </div>
+        </header>
+
+        <section class="highlights" aria-labelledby="highlights-title">
+          <h2 class="sr-only" id="highlights-title">Актуальное</h2>
+          <ul class="highlights-list">
+            <li>
+              <a class="highlight" href="#">
+                <img
+                  class="highlight-img"
+                  alt="Актуальное: New"
+                  width="66"
+                  height="66"
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='66' height='66' viewBox='0 0 66 66'><circle cx='33' cy='33' r='32' fill='%23ffffff' stroke='%23e5e7eb'/><path d='M33 16v34M16 33h34' stroke='%239ca3af' stroke-width='3' stroke-linecap='round'/></svg>"
+                />
+                <span class="highlight-label">New</span>
+              </a>
+            </li>
+            <li>
+              <a class="highlight" href="#">
+                <img
+                  class="highlight-img"
+                  alt="Актуальное: Trips"
+                  width="66"
+                  height="66"
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='66' height='66' viewBox='0 0 66 66'><circle cx='33' cy='33' r='32' fill='%23ffffff' stroke='%23e5e7eb'/><circle cx='33' cy='30' r='12' fill='%239ca3af'/><path d='M21 52c3-10 10-15 12-15s9 5 12 15' fill='%239ca3af'/></svg>"
+                />
+                <span class="highlight-label">Trips</span>
+              </a>
+            </li>
+            <li>
+              <a class="highlight" href="#">
+                <img
+                  class="highlight-img"
+                  alt="Актуальное: Code"
+                  width="66"
+                  height="66"
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='66' height='66' viewBox='0 0 66 66'><circle cx='33' cy='33' r='32' fill='%23ffffff' stroke='%23e5e7eb'/><path d='M26 26l-8 7 8 7M40 26l8 7-8 7' stroke='%239ca3af' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+                />
+                <span class="highlight-label">Code</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <nav class="tabs" aria-label="Разделы профиля">
+          <a class="tab" href="#" aria-current="page">Posts</a>
+          <a class="tab" href="#">Saved</a>
+          <a class="tab" href="#">Tagged</a>
+        </nav>
+
+        <section class="posts" aria-labelledby="posts-title">
+          <h2 class="sr-only" id="posts-title">Посты</h2>
+          <ul class="post-grid" aria-label="Сетка постов">
+            <li>
+              <article class="post">
+                <a class="post-link" href="#" aria-label="Открыть пост 1">
+                  <img
+                    alt="Пост 1"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'><defs><linearGradient id='g1' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23f9a8d4'/><stop offset='1' stop-color='%2393c5fd'/></linearGradient></defs><rect width='900' height='900' fill='url(%23g1)'/><rect x='120' y='120' width='660' height='660' rx='60' fill='rgba(255,255,255,0.35)'/></svg>"
+                  />
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="post">
+                <a class="post-link" href="#" aria-label="Открыть пост 2">
+                  <img
+                    alt="Пост 2"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'><defs><linearGradient id='g2' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23a7f3d0'/><stop offset='1' stop-color='%23fde68a'/></linearGradient></defs><rect width='900' height='900' fill='url(%23g2)'/><circle cx='450' cy='450' r='250' fill='rgba(255,255,255,0.4)'/></svg>"
+                  />
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="post">
+                <a class="post-link" href="#" aria-label="Открыть пост 3">
+                  <img
+                    alt="Пост 3"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'><defs><linearGradient id='g3' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23c4b5fd'/><stop offset='1' stop-color='%23fca5a5'/></linearGradient></defs><rect width='900' height='900' fill='url(%23g3)'/><path d='M180 620c90-150 190-220 300-210s210 110 240 250' fill='rgba(255,255,255,0.38)'/></svg>"
+                  />
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="post">
+                <a class="post-link" href="#" aria-label="Открыть пост 4">
+                  <img
+                    alt="Пост 4"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'><defs><linearGradient id='g4' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2399f6e4'/><stop offset='1' stop-color='%23a5b4fc'/></linearGradient></defs><rect width='900' height='900' fill='url(%23g4)'/><rect x='190' y='190' width='520' height='520' rx='80' fill='rgba(255,255,255,0.35)'/></svg>"
+                  />
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="post">
+                <a class="post-link" href="#" aria-label="Открыть пост 5">
+                  <img
+                    alt="Пост 5"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'><defs><linearGradient id='g5' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23fdba74'/><stop offset='1' stop-color='%23fda4af'/></linearGradient></defs><rect width='900' height='900' fill='url(%23g5)'/><circle cx='300' cy='330' r='140' fill='rgba(255,255,255,0.34)'/><circle cx='560' cy='560' r='190' fill='rgba(255,255,255,0.34)'/></svg>"
+                  />
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="post">
+                <a class="post-link" href="#" aria-label="Открыть пост 6">
+                  <img
+                    alt="Пост 6"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'><defs><linearGradient id='g6' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23fca5a5'/><stop offset='1' stop-color='%2386efac'/></linearGradient></defs><rect width='900' height='900' fill='url(%23g6)'/><path d='M180 240h540v420H180z' fill='rgba(255,255,255,0.35)'/></svg>"
+                  />
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="post">
+                <a class="post-link" href="#" aria-label="Открыть пост 7">
+                  <img
+                    alt="Пост 7"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'><defs><linearGradient id='g7' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2393c5fd'/><stop offset='1' stop-color='%23fcd34d'/></linearGradient></defs><rect width='900' height='900' fill='url(%23g7)'/><path d='M240 660c80-220 200-340 330-320 130 20 210 140 250 320' fill='rgba(255,255,255,0.36)'/></svg>"
+                  />
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="post">
+                <a class="post-link" href="#" aria-label="Открыть пост 8">
+                  <img
+                    alt="Пост 8"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'><defs><linearGradient id='g8' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23d8b4fe'/><stop offset='1' stop-color='%236ee7b7'/></linearGradient></defs><rect width='900' height='900' fill='url(%23g8)'/><rect x='160' y='260' width='580' height='380' rx='80' fill='rgba(255,255,255,0.35)'/></svg>"
+                  />
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="post">
+                <a class="post-link" href="#" aria-label="Открыть пост 9">
+                  <img
+                    alt="Пост 9"
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'><defs><linearGradient id='g9' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23a7f3d0'/><stop offset='1' stop-color='%23c7d2fe'/></linearGradient></defs><rect width='900' height='900' fill='url(%23g9)'/><circle cx='450' cy='450' r='280' fill='rgba(255,255,255,0.34)'/></svg>"
+                  />
+                </a>
+              </article>
+            </li>
+          </ul>
+        </section>
+
+        <section class="edit" aria-labelledby="edit-title">
+          <h2 id="edit-title" class="sr-only">Редактирование профиля</h2>
+          <details class="edit-details">
+            <summary class="btn btn-wide">Edit profile</summary>
+            <form class="edit-form" action="#" method="post">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" value="Ramazan Perdebay" required />
+              </div>
+              <div class="field">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="url" placeholder="https://..." />
+              </div>
+              <div class="field">
+                <label for="about">Bio</label>
+                <textarea id="about" name="about" rows="3" placeholder="Коротко о себе"></textarea>
+              </div>
+              <button class="btn" type="submit">Save</button>
+            </form>
+          </details>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <nav aria-label="Ссылки в подвале">
+        <ul class="footer-links">
+          <li><a class="footer-link" href="#">About</a></li>
+          <li><a class="footer-link" href="#">Help</a></li>
+          <li><a class="footer-link" href="#">Privacy</a></li>
+          <li><a class="footer-link" href="#">Terms</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
