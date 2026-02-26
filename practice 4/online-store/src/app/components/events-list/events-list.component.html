@@ -1,0 +1,20 @@
+<section class="page">
+  <header class="header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">OS</div>
+      <div class="titles">
+        <h1>Online Store</h1>
+        <p>Каталог событий и билетов (демо)</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="grid" role="list">
+    @for (e of events; track e.id) {
+      <div class="cell" role="listitem">
+        <app-event-card [event]="e" />
+      </div>
+    }
+  </div>
+</section>
+

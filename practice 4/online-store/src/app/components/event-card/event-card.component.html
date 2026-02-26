@@ -1,0 +1,38 @@
+<article class="card">
+  <a class="media" [href]="event().link" target="_blank" rel="noopener noreferrer">
+    <img [src]="event().image" [alt]="event().name" loading="lazy" />
+  </a>
+
+  <div class="body">
+    <div class="top">
+      <div class="title-row">
+        <h3 class="title">
+          <a [href]="event().link" target="_blank" rel="noopener noreferrer">{{ event().name }}</a>
+        </h3>
+        <div class="price">{{ priceLabel() }}</div>
+      </div>
+
+      <p class="desc">{{ event().description }}</p>
+
+      <div class="meta">
+        <div class="rating" [attr.aria-label]="'Рейтинг ' + event().rating">
+          @for (isFilled of ratingStars(); track $index) {
+            <span class="star" [class.filled]="isFilled">★</span>
+          }
+          <span class="rating-num">{{ event().rating.toFixed(1) }}</span>
+        </div>
+        <a class="link" [href]="event().link" target="_blank" rel="noopener noreferrer">Открыть</a>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn secondary" [href]="whatsappShareUrl()" target="_blank" rel="noopener noreferrer">
+        Share WhatsApp
+      </a>
+      <a class="btn secondary" [href]="telegramShareUrl()" target="_blank" rel="noopener noreferrer">
+        Share Telegram
+      </a>
+    </div>
+  </div>
+</article>
+
