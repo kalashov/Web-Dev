@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1 - Facebook Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="brand" aria-label="Facebook brand section">
+      <h1>facebook</h1>
+      <p>Facebook helps you connect and share with the people in your life.</p>
+    </section>
+
+    <section class="card" aria-label="Login panel">
+      <h2 class="visually-hidden">Log in to Facebook</h2>
+      <form class="login-form" action="#" method="post">
+        <div class="field">
+          <label for="fb-email">Email address or phone number</label>
+          <input id="fb-email" name="email" type="text" autocomplete="username" required>
+        </div>
+
+        <div class="field">
+          <label for="fb-password">Password</label>
+          <input id="fb-password" name="password" type="password" autocomplete="current-password" required>
+        </div>
+
+        <button type="submit" class="btn-login">Log in</button>
+      </form>
+
+      <a class="link-forgot" href="#">Forgot password?</a>
+      <hr>
+      <a class="btn-create" href="#">Create new account</a>
+    </section>
+  </main>
+</body>
+</html>
