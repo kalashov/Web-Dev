@@ -9,8 +9,11 @@
     </div>
   </header>
 
-  <section class="favorites">
-    <h2>⭐ Favorites ({{ favorites.length }})</h2>
+  <section class="section favorites" aria-label="Избранное">
+    <div class="section-head">
+      <h2>⭐ Избранное</h2>
+      <span class="badge" aria-label="Количество в избранном">{{ favorites.length }}</span>
+    </div>
 
     @if (favorites.length === 0) {
       <p class="empty">No favorite products yet</p>
@@ -19,7 +22,14 @@
     }
   </section>
 
-  <div class="spacer"></div>
+  <div class="divider" role="separator" aria-hidden="true"></div>
 
-  <app-events-list [events]="events" (toggleFavorite)="toggleFavorite($event)" />
+  <section class="section catalog" aria-label="Каталог">
+    <div class="section-head">
+      <h2>Каталог</h2>
+      <span class="badge" aria-label="Количество в каталоге">{{ events.length }}</span>
+    </div>
+
+    <app-events-list [events]="events" (toggleFavorite)="toggleFavorite($event)" />
+  </section>
 </section>
