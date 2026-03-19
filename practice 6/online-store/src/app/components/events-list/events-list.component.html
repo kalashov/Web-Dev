@@ -1,0 +1,8 @@
+<div class="grid" role="list">
+  @for (e of events(); track e.id) {
+    <div class="cell" role="listitem">
+      <app-event-card [event]="e" (toggleFavorite)="toggleFavorite.emit($event)" />
+    </div>
+  }
+</div>
+

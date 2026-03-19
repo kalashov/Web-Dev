@@ -1,0 +1,27 @@
+<header class="topbar">
+  <h1>Online Store</h1>
+  <p>Angular catalog of products from Kaspi.kz</p>
+</header>
+
+<main class="container">
+  <nav class="categories">
+    @for (category of categories; track category.id) {
+      <button
+        class="category-btn"
+        [class.active]="category.id === selectedCategoryId()"
+        (click)="selectCategory(category.id)"
+      >
+        {{ category.name }}
+      </button>
+    }
+  </nav>
+
+  @if (selectedCategoryId() !== null) {
+    <app-product-list [products]="filteredProducts()" />
+  } @else {
+    <div class="welcome">
+      <h2>Welcome to Online Store</h2>
+      <p>Select a category above to browse products</p>
+    </div>
+  }
+</main>

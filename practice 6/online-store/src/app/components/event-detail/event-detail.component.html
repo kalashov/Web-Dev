@@ -1,0 +1,47 @@
+@if (event(); as ev) {
+  <div class="detail">
+    <a routerLink="/" class="back">&larr; Назад к каталогу</a>
+
+    <div class="gallery">
+      @for (img of ev.images; track $index) {
+        <img [src]="img" [alt]="ev.name + ' — фото ' + ($index + 1)" loading="lazy" />
+      }
+    </div>
+
+    <div class="info">
+      <div class="header-row">
+        <h1>{{ ev.name }}</h1>
+        <button
+          class="star-btn star-btn--large"
+          type="button"
+          [class.active]="isFavorite()"
+          [attr.aria-pressed]="isFavorite()"
+          [attr.aria-label]="isFavorite() ? 'Убрать из избранного' : 'Добавить в избранное'"
+          (click)="toggleFavorite()"
+        >
+          ★
+        </button>
+      </div>
+
+      <p class="price">{{ priceLabel() }}</p>
+
+      <div class="rating" [attr.aria-label]="'Рейтинг ' + ev.rating">
+        @for (filled of ratingStars(); track $index) {
+          <span class="star" [class.filled]="filled">★</span>
+        }
+        <span class="rating-num">{{ ev.rating.toFixed(1) }}</span>
+      </div>
+
+      <p class="description">{{ ev.description }}</p>
+
+      <a class="btn primary" [href]="ev.link" target="_blank" rel="noopener noreferrer">
+        Купить билет
+      </a>
+    </div>
+  </div>
+} @else {
+  <div class="not-found">
+    <p>Событие не найдено</p>
+    <a routerLink="/">Вернуться к каталогу</a>
+  </div>
+}

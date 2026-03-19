@@ -1,0 +1,42 @@
+<section class="page">
+  <header class="header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">OS</div>
+      <div class="titles">
+        <h1>Online Store</h1>
+        <p>Каталог событий и билетов (демо)</p>
+      </div>
+    </div>
+  </header>
+
+  <router-outlet />
+
+  <section class="section catalog" aria-label="Каталог">
+    <div class="section-head">
+      <h2>{{ showOnlyFavorites() ? '⭐ Избранное' : 'Каталог' }}</h2>
+
+      <div class="controls">
+        <button
+          class="toggle-btn"
+          type="button"
+          [class.active]="showOnlyFavorites()"
+          (click)="toggleShowFavorites()"
+        >
+          {{ showOnlyFavorites() ? 'Show all' : 'Show only favorites' }}
+        </button>
+        <span class="badge" aria-label="Количество в избранном">{{ favCount() }}</span>
+      </div>
+    </div>
+
+    @if (displayedEvents().length === 0) {
+      <div class="empty-state">
+        <p>Нет избранных событий</p>
+        <button class="link-btn" type="button" (click)="toggleShowFavorites()">
+          Показать все события
+        </button>
+      </div>
+    } @else {
+      <app-events-list [events]="displayedEvents()" (toggleFavorite)="toggleFavorite($event)" />
+    }
+  </section>
+</section>

@@ -1,0 +1,47 @@
+<article class="card">
+  <a class="media" [routerLink]="['/event', event().id]">
+    <img [src]="event().image" [alt]="event().name" loading="lazy" />
+  </a>
+
+  <div class="body">
+    <div class="top">
+      <div class="title-row">
+        <h3 class="title">
+          <a [routerLink]="['/event', event().id]">{{ event().name }}</a>
+        </h3>
+        <button
+          class="star-toggle"
+          type="button"
+          [class.active]="isFavorite()"
+          [attr.aria-pressed]="isFavorite()"
+          [attr.aria-label]="isFavorite() ? 'Убрать из избранного' : 'Добавить в избранное'"
+          (click)="onToggleFavorite()"
+        >
+          ★
+        </button>
+      </div>
+
+      <div class="price">{{ priceLabel() }}</div>
+      <p class="desc">{{ event().description }}</p>
+
+      <div class="meta">
+        <div class="rating" [attr.aria-label]="'Рейтинг ' + event().rating">
+          @for (isFilled of ratingStars(); track $index) {
+            <span class="star" [class.filled]="isFilled">★</span>
+          }
+          <span class="rating-num">{{ event().rating.toFixed(1) }}</span>
+        </div>
+        <a class="link" [routerLink]="['/event', event().id]">Подробнее</a>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn secondary" [href]="whatsappShareUrl()" target="_blank" rel="noopener noreferrer">
+        Share WhatsApp
+      </a>
+      <a class="btn secondary" [href]="telegramShareUrl()" target="_blank" rel="noopener noreferrer">
+        Share Telegram
+      </a>
+    </div>
+  </div>
+</article>
