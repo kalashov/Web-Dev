@@ -1,0 +1,12 @@
+<section class="catalog">
+  <h2>Kaspi Online Store</h2>
+  <p class="subtitle">
+    Product catalog with real Kaspi links. Choose an item and share it in one click.
+  </p>
+
+  <div class="product-grid">
+    @for (product of products; track product.id) {
+      <app-product-card [product]="product" />
+    }
+  </div>
+</section>

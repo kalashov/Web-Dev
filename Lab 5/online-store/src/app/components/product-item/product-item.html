@@ -1,0 +1,55 @@
+<article class="product-card">
+  <img
+    class="main-image"
+    [src]="product().image"
+    [alt]="product().name"
+    loading="lazy"
+  />
+
+  <div class="card-body">
+    <h3 class="title">{{ product().name }}</h3>
+    <p class="description">{{ product().description }}</p>
+
+    <div class="meta">
+      <span class="price">{{ product().price | number }} ₸</span>
+      <div class="rating">
+        @for (star of [1, 2, 3, 4, 5]; track star) {
+          <span [class.filled]="star <= roundedRating()">★</span>
+        }
+        <span class="rating-value">{{ product().rating }}</span>
+      </div>
+    </div>
+
+    <div class="likes-row">
+      <button class="like-btn" (click)="onLike()">❤ {{ likesCount() }}</button>
+    </div>
+
+    <div class="actions">
+      <a
+        [href]="product().link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary"
+      >
+        Open on Kaspi
+      </a>
+      <a
+        [href]="whatsappShareLink()"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-share"
+      >
+        WhatsApp
+      </a>
+      <a
+        [href]="telegramShareLink()"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-share"
+      >
+        Telegram
+      </a>
+      <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+    </div>
+  </div>
+</article>

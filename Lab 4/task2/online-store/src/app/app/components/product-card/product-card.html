@@ -1,0 +1,46 @@
+<article class="product-card">
+  <img
+    class="main-image"
+    [src]="currentImage()"
+    [alt]="product().name"
+    loading="lazy"
+  />
+
+  <div class="thumbnail-list">
+    @for (img of product().images; track img; let idx = $index) {
+      <button
+        type="button"
+        class="thumbnail-button"
+        [class.active]="idx === selectedImageIndex()"
+        (click)="selectImage(idx)"
+      >
+        <img [src]="img" [alt]="product().name + ' photo ' + (idx + 1)" loading="lazy" />
+      </button>
+    }
+  </div>
+
+  <h3 class="title">{{ product().name }}</h3>
+  <p class="description">{{ product().description }}</p>
+
+  <div class="meta">
+    <span class="price">{{ product().price | number }} KZT</span>
+    <div class="rating" [attr.aria-label]="'Rating: ' + product().rating">
+      @for (star of [1, 2, 3, 4, 5]; track star) {
+        <span [class.filled]="star <= roundedRating()">★</span>
+      }
+      <span class="rating-value">{{ product().rating }}</span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <a [href]="product().link" target="_blank" rel="noopener noreferrer" class="buy-button">
+      Open on Kaspi
+    </a>
+    <a [href]="whatsappShareLink()" target="_blank" rel="noopener noreferrer" class="share-button">
+      Share WhatsApp
+    </a>
+    <a [href]="telegramShareLink()" target="_blank" rel="noopener noreferrer" class="share-button">
+      Share Telegram
+    </a>
+  </div>
+</article>
