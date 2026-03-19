@@ -1,0 +1,101 @@
+.detail {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.detail h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #1a1a2e;
+}
+
+.detail p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.edit-section {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.edit-section label {
+  font-weight: 600;
+  color: #333;
+}
+
+.edit-section input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.save-btn {
+  padding: 8px 20px;
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.save-btn:hover {
+  background: #219a52;
+}
+
+.saved-msg {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+}
+
+.photos-btn {
+  padding: 10px 24px;
+  background: #4361ee;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.photos-btn:hover {
+  background: #3a56d4;
+}
+
+.back-btn {
+  padding: 10px 24px;
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #ccc;
+}

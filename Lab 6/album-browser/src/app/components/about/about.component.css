@@ -1,0 +1,35 @@
+.about {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #1a1a2e;
+}
+
+.about p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+.about ul li {
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.about a {
+  color: #4361ee;
+}
